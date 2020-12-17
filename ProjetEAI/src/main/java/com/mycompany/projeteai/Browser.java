@@ -46,12 +46,12 @@ public class Browser {
         Session session = null;
         QueueBrowser browser = null;
 
-        if (args.length != 1) {
-            System.out.println("usage: Browser <queue>");
-            System.exit(1);
-        }
+//        if (args.length != 1) {
+//            System.out.println("usage: Browser <queue>");
+//            System.exit(1);
+//        }
 
-        queueName = args[0];
+//        queueName = args[0];
 
         try {
             // create the JNDI initial context.

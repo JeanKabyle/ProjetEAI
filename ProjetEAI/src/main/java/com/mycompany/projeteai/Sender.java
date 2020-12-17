@@ -8,7 +8,6 @@ package com.mycompany.projeteai;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-
 import javax.jms.JMSException;
 import javax.jms.Destination;
 import javax.jms.Connection;
@@ -32,23 +31,23 @@ public class Sender {
         Context context = null;
         ConnectionFactory factory = null;
         Connection connection = null;
-        String factoryName = "ConnectionFactory";
-        String destName = null;
+        String factoryName = "qCnx";
+        String destName = "queuePubToPresse";
         Destination dest = null;
         int count = 1;
         Session session = null;
         MessageProducer sender = null;
-        String text = "Message ";
+        String text = "Message test ";
 
-        if (args.length < 1 || args.length > 2) {
-            System.out.println("usage: Sender <destination> [count]");
-            System.exit(1);
-        }
-
-        destName = args[0];
-        if (args.length == 2) {
-            count = Integer.parseInt(args[1]);
-        }
+//        if (args.length < 1 || args.length > 2) {
+//            System.out.println("usage: Sender <destination> [count]");
+//            System.exit(1);
+//        }
+//
+//        destName = args[0];
+//        if (args.length == 2) {
+//            count = Integer.parseInt(args[1]);
+//        }
 
         try {
             // create the JNDI initial context.

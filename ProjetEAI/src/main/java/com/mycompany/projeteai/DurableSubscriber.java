@@ -41,10 +41,10 @@ public class DurableSubscriber {
         TopicSubscriber subscriber = null;
         String subscriptionName = "rubADubSub";
 
-        if (args.length < 1 || args.length > 2) {
-            System.out.println("usage: DurableSubscriber <topic> [count]");
-            System.exit(1);
-        }
+//        if (args.length < 1 || args.length > 2) {
+//            System.out.println("usage: DurableSubscriber <topic> [count]");
+//            System.exit(1);
+//        }
 
         topicName = args[0];
         if (args.length == 2) {
@@ -97,7 +97,6 @@ public class DurableSubscriber {
                     exception.printStackTrace();
                 }
             }
-
             // close the connection
             if (connection != null) {
                 try {
